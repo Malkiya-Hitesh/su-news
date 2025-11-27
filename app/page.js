@@ -1,15 +1,15 @@
-import Image from "next/image";
+import NewsBox from "./components/news/NewsBox";
+import NewsCategery from "./components/news/NewsCategery";
+import Offers from "./components/Offers";
+import OffersCard from "./components/OffersCard";
 
 export default function Home() {
   return (
     <main>
-      <h1>Welcome to My Next.js App</h1>
-      <Image
-        src="/images/sample.jpg"
-        alt="Sample Image"
-        width={600}
-        height={400}
-      />
+
+      <NewsBox />
+      <NewsCategery type="Latest" />
+      <Offers />
     </main>
   );
 }

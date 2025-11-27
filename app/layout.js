@@ -1,4 +1,7 @@
 
+import City from "./components/City";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
 import "./globals.css";
 
 
@@ -11,10 +14,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body >
+
+        <Navbar />
+        <City />
         {children}
+        <Footer />
       </body>
     </html>
   );
