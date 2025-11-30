@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { NavLink } from './Navbar'
-
+import { FaInstagram } from "react-icons/fa";
 export default function Footer() {
 
 
@@ -23,7 +23,7 @@ return (
             </nav>
 
             <div className="flex-1 flex items-start justify-end">
-                {/* Add social links or extra info here */}
+               <Link href="" > <FaInstagram /></Link>  
             </div>
         </div>
 

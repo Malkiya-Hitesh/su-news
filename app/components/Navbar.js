@@ -1,21 +1,21 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import NavButoon from './ui/NavButoon'
-
+import ResposiveNave from './ResposiveNave';
 function Navbar() {
     return (
-        <nav className='grid grid-cols-[0.8fr_1fr] h-[8rem] w-[98vw] overflow-x-hidden py-[1rem] px-[var(--cost-margin-xxl)]  items-center bg-[var(--color-bg)]  ' >
-            <div>
+        <nav className='grid grid-cols-[1fr_1fr] min-[1024px]:h-[8rem] h-[7rem]  w-[100vw] max-[640px]:h-[5rem] overflow-x-hidden py-[1rem] px-[2rem]  items-center bg-[var(--color-bg)]  ' >
+            <div className=' '>
                 <Image
-                    className=''
-                    src='/image/logo.png'
-                    width={50}
-                    height={30}
+                    className=' min-[1024px]:w-[40%] w-[60%] max-[640px]:w-[80%] h-auto object-contain cursor-pointer'
+                    src='/image/logo.jpg'
+                    width={100000000000}
+                    height={100000000000}
                     alt='logo'
                 />
                 
             </div>
-            <div className='flex items-center gap-3 justify-between  '>
+            <div className='flex items-center gap-3 justify-between max-[1024]:hidden' >
                 <NavLink h={"/"} data={"home"} />
                 <NavLink h={"sport"} data={"sport"} />
                 <NavLink h={"events"} data={"events"} />
@@ -23,6 +23,11 @@ function Navbar() {
                 <NavLink h={"contact"} data={"contact"} />  
                 <NavButoon theme={"dark"}>subscribe</NavButoon>
                 <NavButoon theme={"light"}>login</NavButoon>
+
+            </div>
+            <div className=' max-[1024px]:flex hidden justify-end  items-center gap-5 ' >
+                
+               <ResposiveNave />
 
             </div>
         </nav>
@@ -35,6 +40,6 @@ export default Navbar
 
 export const NavLink = ({ data, h }) => {
     return (
-        <Link className='text-[1.35rem] font-semibold' href={h} >{data}</Link>
+        <Link className='text-[1.35rem] font-semibold capitalize' href={h} >{data}</Link>
     )
 }

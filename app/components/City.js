@@ -1,30 +1,26 @@
+import Link from 'next/link'
 import React from 'react'
 
 function City() {
+ let city=    [
+  "Chotila",
+  "Chuda",
+  "Dasada",
+  "Dhrangadhra",
+  "Halvad",
+  "Lakhtar",
+  "Limbdi",
+  "Muli",
+  "Sayla",
+  "Thangadh",
+  "Wadhwan"
+]
+
     return (
         <div className='perent border   py-3 px-7 flex flex-row justify-start overflow-x-auto scrollbar-none scroll-smooth items-start gap-6 ' >
-            <CitySpan data={"chotila"} />
-            <CitySpan data={'saela'} />
-            <CitySpan data={'muli'} />
-            <CitySpan data={'limbadi'} />
-            <CitySpan data={'surendranagar'} />
-            <CitySpan data={'dhrangadhra'} />
-            <CitySpan data={'rajkot'} />
-            <CitySpan data={'morbi'} />
-            <CitySpan data={'jamnagar'} />
-            <CitySpan data={'junagadh'} />
-            <CitySpan data={'porbandar'} />
-            <CitySpan data={"chotila"} />
-            <CitySpan data={'saela'} />
-            <CitySpan data={'muli'} />
-            <CitySpan data={'limbadi'} />
-            <CitySpan data={'surendranagar'} />
-            <CitySpan data={'dhrangadhra'} />
-            <CitySpan data={'rajkot'} />
-            <CitySpan data={'morbi'} />
-            <CitySpan data={'jamnagar'} />
-            <CitySpan data={'junagadh'} />
-            <CitySpan data={'porbandar'} />
+            {city.map((item , index)=>(
+                <CitySpan key={index} data={item} />
+            ))}
 
 
 
@@ -38,11 +34,13 @@ export default City
 
 function CitySpan({ data }) {
     return (
+        <Link href={`/city/${data.toLowerCase()}`}>
         <span
             className='text-[length:var(--text-lgg)] text-[var(--color-text)] border-blue-600 font-[200] tracking-[.12rem]   hover:bg-gradient-to-r from-blue-600 to-purple-600 hover:text-transparent bg-clip-text  pb-1   cursor-pointer '
             style={{ fontFamily: 'Inter, Roboto, "Helvetica Neue", Arial, sans-serif' }}
         >
             {data}
         </span>
+        </Link>
     )
 }
