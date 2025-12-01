@@ -4,6 +4,7 @@ import { getNews } from "@/app/lib/getNews";
 import Loading from "@/app/loading";
 import Nonews from "../Nonews";
 import formatDate from "@/app/lib/formetDate";
+import Link from "next/link";
 
 async function NewsSection({ item, url }) {
   let newsData = undefined;
@@ -15,13 +16,13 @@ async function NewsSection({ item, url }) {
 
     // 👉 CHECK IF DATA EXISTS
     if (Array.isArray(newsData) && newsData.length > 0) {
-       
-            const tampDate = formatDate(newsData[0].date);
-            formatted = tampDate;
-   
 
-     
-       
+      const tampDate = formatDate(newsData[0].date);
+      formatted = tampDate;
+
+
+
+
     }
   } catch (err) {
     console.error("Error fetching news:", err);
@@ -38,11 +39,11 @@ async function NewsSection({ item, url }) {
   }
 
   return (
-    <section className="py-5 px-7  grid  gap-y-5 min-[1024px]:grid-cols-[1fr_0.7fr] grid-cols-1 gap-x-6 overflow-x-hidden bg-[var(--color-bg)]  flex-wrap">
+    <section className="py-5 min-[1024px]:px-7 px-5 max-[640px]:px-2.5 grid  gap-y-5 min-[1024px]:grid-cols-[1fr_0.7fr] grid-cols-1 gap-x-6 overflow-x-hidden bg-[var(--color-bg)]  flex-wrap">
       <div className="row-span-3 flex flex-col gap-4 py-3 px-4 border-2  border-[var(--color-border)] bg-[var(--color-bg-light)] hover:bg-[var(--color-border)] rounded-[10px]">
 
         <Image
-          src={newsData[0].img || '/noimage.jpg'  }
+          src={newsData[0].img || '/noimage.jpg'}
           width={1000}
           height={1000}
           className="w-full min-[1024px]:h-[20rem] h-[22rem] object-contain rounded-[10px] row-span-2"
@@ -53,11 +54,11 @@ async function NewsSection({ item, url }) {
           <span className="text-[0.9rem] font-[400] text-[var(--color-accent)]">
             {formatted}
           </span>
-
-          <h2 className="text-[1.5rem] font-bold line-clamp-2 text-[var(--color-text)] hover:text-[var(--color-primary)] hover:underline cursor-pointer">
-            {newsData[0].title}
-          </h2>
-
+          <Link href={`/${newsData[0].slug}`}>
+            <h2 className="text-[1.5rem] font-bold line-clamp-2 text-[var(--color-text)] hover:text-[var(--color-primary)] hover:underline cursor-pointer">
+              {newsData[0].title}
+            </h2>
+          </Link>
           <p className="text-[1rem] font-normal line-clamp-3 text-[var(--color-secondary)]">
             {newsData[0].desc}
           </p>
