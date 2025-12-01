@@ -61,11 +61,11 @@ function NewsBox({ newsData }) {
   }
 
   return (
-    <section className="grid min-[1024px]:grid-cols-[1fr_0.5fr] grid-cols-1 py-5 min-[1024px]:px-7 px-4.5 max-[640px]:px-2.5 gap-6 items-start">
+    <section className="grid min-[1024px]:grid-cols-[1fr_0.5fr] grid-cols-1 py-5 min-[1024px]:px-7 px-4.5 max-[640px]:px-2.3 gap-6 items-start">
       {/* LEFT MAIN DIV */}
       <div
         ref={leftRef}
-        className="flex flex-col gap-5  min-[1024px]:px-5 px-3 max-[640px]:px-1 py-4 p bg-[var(--color-bg-light)] border border-[var(--color-border)] rounded-[10px] overflow-y-scroll no-scrollbar"
+        className="flex flex-col gap-5  min-[1024px]:px-5 px-3 max-[640px]:px-2 py-4 p bg-[var(--color-bg-light)] border border-[var(--color-border)] rounded-[10px] overflow-y-scroll no-scrollbar"
       >
         <div className="flex flex-col gap-3">
           <h1 className="min-[1024px]:text-[33px] text-[28px] max-[640px]:text-[24px] font-[600] text-[var(--color-text)]">
@@ -93,7 +93,7 @@ function NewsBox({ newsData }) {
         </div>
 
         {/* FULL DETAIL BOX */}
-        <div className="flex flex-col gap-7 mt-4 p-5 bg-[var(--color-bg-light)]  rounded-[10px]">
+        <div className="flex flex-col gap-6 mt-3 py-1 bg-[var(--color-bg-light)]  rounded-[10px]">
           {newsData.desc
             .split(/\r?\n\r?\n/) // paragraph split
             .map((para, i) => (

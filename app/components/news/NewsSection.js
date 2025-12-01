@@ -52,7 +52,7 @@ async function NewsSection({ item, url }) {
 
         <div className="flex flex-col gap-3 mt-3">
           <span className="text-[0.9rem] font-[400] text-[var(--color-accent)]">
-            {formatted}
+            {newsData[0].type} • {formatted}
           </span>
           <Link href={`/${newsData[0].slug}`}>
             <h2 className="text-[1.5rem] font-bold line-clamp-2 text-[var(--color-text)] hover:text-[var(--color-primary)] hover:underline cursor-pointer">
