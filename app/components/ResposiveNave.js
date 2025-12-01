@@ -18,7 +18,7 @@ function ResposiveNave() {
          <div className='max-[640px]:hidden'>   <NavButoon theme={"light"}>login</NavButoon></div>
             <GiHamburgerMenu 
                 onClick={toggleMenu} 
-                className='text-[1.35rem] cursor-pointer'
+                className='text-[1.35rem] max-[640px]:text-[1.8rem] cursor-pointer'
             />
 
             {/* BACKDROP */}
@@ -32,7 +32,7 @@ function ResposiveNave() {
             ></div>
 
             {/* MENU PANEL */}
-            <div
+            <div onClick={toggleMenu}
                 className={`
                     fixed top-0 left-0 h-full w-[60%]
                     bg-[var(--color-bg)]

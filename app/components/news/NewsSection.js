@@ -38,14 +38,14 @@ async function NewsSection({ item, url }) {
   }
 
   return (
-    <section className="py-5 px-7  grid  gap-y-5 grid-cols-[1fr_0.8fr] gap-x-6 overflow-x-hidden bg-[var(--color-bg)]  flex-wrap">
+    <section className="py-5 px-7  grid  gap-y-5 min-[1024px]:grid-cols-[1fr_0.7fr] grid-cols-1 gap-x-6 overflow-x-hidden bg-[var(--color-bg)]  flex-wrap">
       <div className="row-span-3 flex flex-col gap-4 py-3 px-4 border-2  border-[var(--color-border)] bg-[var(--color-bg-light)] hover:bg-[var(--color-border)] rounded-[10px]">
 
         <Image
           src={'/image/of1.jpg'}
           width={1000}
           height={1000}
-          className="w-full h-[20rem] object-contain rounded-[10px] row-span-2"
+          className="w-full min-[1024px]:h-[20rem] h-[22rem] object-contain rounded-[10px] row-span-2"
           alt="main-news"
         />
 

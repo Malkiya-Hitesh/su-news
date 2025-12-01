@@ -7,8 +7,8 @@ import Offers from "./components/Offers";
 
 export default function Home() {
   return (
-    <main>
-      <City />
+    <main className="min-[1024px]:mt-[8.1rem] mt-[7.5rem] max-[640px]:mt-[5.6rem]  ">
+      {/* <City /> */}
       <LatestNews item={8} />
       <NewsBreking item={8} />
       <Offers />

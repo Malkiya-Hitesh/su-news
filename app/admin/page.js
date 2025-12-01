@@ -54,7 +54,7 @@ const temperr = validateNews(formData);
   };
 
   return (
-    <form ref={formRef} onSubmit={handleSubmit} className="max-w-3xl mx-auto p-8 bg-white shadow-md rounded space-y-4">
+    <form ref={formRef} onSubmit={handleSubmit} className=" min-[1024px]:mt-[8.1rem] mt-[7.5rem] max-[640px]:mt-[5.6rem]  max-w-3xl mx-auto p-8 bg-white shadow-md rounded space-y-4">
       <h2 className="text-2xl font-bold mb-6">Add News</h2>
 
       <Input label="Title" type="text" name="title" placeholder="News title" errors={errors} />

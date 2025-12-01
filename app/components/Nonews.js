@@ -6,7 +6,7 @@ import Button from "./ui/Button";
 function Nonews() {
   return (
     <div
-      className="flex flex-col items-center justify-center h-[70vh] text-center px-4"
+      className=" min-[1024px]:mt-[8.1rem] mt-[7.5rem] max-[640px]:mt-[5.6rem] flex flex-col items-center justify-center h-[70vh] text-center px-4"
       style={{ color: "var(--color-text)" }}
     >
       <div

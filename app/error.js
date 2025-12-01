@@ -4,7 +4,7 @@ import React from 'react'
 
 export default function Error() {
   return (
-   <div className=' mt-24 min-h-11'>
+   <div className=' min-[1024px]:mt-[8.1rem] mt-[7.5rem] max-[640px]:mt-[5.6rem] min-h-11'>
     
     
      <button

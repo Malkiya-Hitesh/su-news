@@ -4,10 +4,10 @@ import NavButoon from './ui/NavButoon'
 import ResposiveNave from './ResposiveNave';
 function Navbar() {
     return (
-        <nav className='grid grid-cols-[1fr_1fr] min-[1024px]:h-[8rem] h-[7rem]  w-[100vw] max-[640px]:h-[5rem] overflow-x-hidden py-[1rem] px-[2rem]  items-center bg-[var(--color-bg)]  ' >
+        <nav className='grid grid-cols-[1fr_1fr]   w-[100vw] min-[1024px]:h-[8rem] h-[7.5rem] max-[640px]:h-[5.5rem] overflow-x-hidden  px-[2rem] max-[640px]:px-[1.5rem] items-center bg-[var(--color-bg)] fixed top-0 ' >
             <div className=' '>
                 <Image
-                    className=' min-[1024px]:w-[40%] w-[60%] max-[640px]:w-[80%] h-auto object-contain cursor-pointer'
+                    className=' min-[1024px]:w-[40%] w-[60%] max-[640px]:w-[85%] h-auto object-contain cursor-pointer'
                     src='/image/logo.jpg'
                     width={100000000000}
                     height={100000000000}

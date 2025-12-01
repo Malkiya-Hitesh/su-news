@@ -6,7 +6,7 @@ import Button from "./components/ui/Button";
 export default function NotFound() {
   return (
     <div
-      className="flex flex-col items-center justify-center min-h-screen px-4 bg-[var(--color-bg-light)]"
+      className="flex flex-col items-center justify-center min-[1024px]:mt-[8.1rem] mt-[7.5rem] max-[640px]:mt-[5.6rem] min-h-screen px-4 bg-[var(--color-bg-light)]"
       style={{ color: "var(--color-text)" }}
     >
       <div className="flex flex-col items-center max-w-lg w-full p-8 rounded-3xl shadow-lg text-center">
