@@ -42,7 +42,7 @@ async function NewsSection({ item, url }) {
       <div className="row-span-3 flex flex-col gap-4 py-3 px-4 border-2  border-[var(--color-border)] bg-[var(--color-bg-light)] hover:bg-[var(--color-border)] rounded-[10px]">
 
         <Image
-          src={'/image/of1.jpg'}
+          src={newsData[0].img || '/noimage.jpg'  }
           width={1000}
           height={1000}
           className="w-full min-[1024px]:h-[20rem] h-[22rem] object-contain rounded-[10px] row-span-2"

@@ -22,7 +22,7 @@ function NewsCard({item, index}) {
           className="flex flex-row-reverse items-center justify-end gap-3  py-3 px-4 border-2  border-[var(--color-border)] bg-[var(--color-bg-light)] hover:bg-[var(--color-border)] rounded-[10px]"
         >
           <Image
-            src={item.img || '/image/news-thum2.png'}
+            src={item.img || '/image/noimage.jpg'}
             width={1000}
             height={1000}
             alt="news thumbnail"

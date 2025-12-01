@@ -83,7 +83,7 @@ function NewsBox({ newsData }) {
 
         <div className="overflow-hidden rounded-[10px]">
           <Image
-            src={newsData.img || '/image/news-thum2.png'}
+            src={newsData.img || '/image/noimage.jpg'}
             width={1000}
             height={800}
             className="w-[90%] h-[90%] object-cover rounded-[10px] mx-auto"
