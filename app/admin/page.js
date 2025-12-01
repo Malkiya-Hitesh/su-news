@@ -10,44 +10,40 @@ export default function NewsForm() {
 
 const [errors, setErrors] = useState({});
   const handleSubmit = async (e) => {
-
-
-
     e.preventDefault();
-
-
-
-
     setLoading(true);
-
-
     try {
       const formData = new FormData(formRef.current);
-
-      if (!formData.get("isBreaking")) {
+ if (!formData.get("isBreaking")) {
         formData.set("isBreaking", "false");
       }
-const temperr = validateNews(formData);
-      if (Object.keys(temperr).length > 0) {
-        
-        
-        setErrors(temperr);
-        setLoading(false);
- 
-      }
+
+
+ const temperr = validateNews(formData);
+console.log(temperr);
+
+    // STOP SUBMIT IF ERRORS FOUND
+    if (Object.keys(temperr).length > 0) {
+      setErrors(temperr);
+      setLoading(false);
+      return; // IMPORTANT!!!!
+    }
+
       
       const res = await newsCreat(formData);
 
+console.log(res);
 
       if (res.success) {
         alert('News created successfully!');
         
      
       } else {
+        alert('Failed to create news. Please try again.');
        
       }
     } catch (err) {
-   
+      alert('An error occurred. Please try again.');
     } finally {
       setLoading(false);
     }
@@ -58,6 +54,8 @@ const temperr = validateNews(formData);
       <h2 className="text-2xl font-bold mb-6">Add News</h2>
 
       <Input label="Title" type="text" name="title" placeholder="News title" errors={errors} />
+      <Input label="URL" type="text" name="url" placeholder="News URL" errors={errors} />
+
       <Textarea label="Main Description" type="text" name="maindes" placeholder="Short main description" errors={errors} />
       <Textarea label="Description" type="text" name="desc" placeholder="Full news content" errors={errors}  />
       <Select label="Type" name="type" errors={errors} options={[
@@ -97,7 +95,7 @@ const temperr = validateNews(formData);
         className={`px-6 py-2 font-bold rounded text-white ${loading ? 'bg-gray-400' : 'bg-blue-600 hover:bg-blue-700'}`}
       
       >
-     newsCreat
+     news Creat
       </button>
 
       

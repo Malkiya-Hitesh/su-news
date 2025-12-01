@@ -24,8 +24,10 @@ export const newsCreat = async (formData) => {
         const keywords = formData.get("keywords")?.trim();
         const isBreaking = formData.get("isBreaking") === "true" || formData.get("isBreaking") === "on";
         const location = formData.get("location")?.trim();
-
+        const url = formData.get("url")?.trim();
         const imgFile = formData.get("image"); // get the uploaded file
+
+
         let imgUrl;
         if (imgFile && imgFile.size > 0) {
             const buffer = Buffer.from(await imgFile.arrayBuffer());
@@ -41,8 +43,7 @@ export const newsCreat = async (formData) => {
             });
             imgUrl = result.secure_url; // store the uploaded image URL
         }
-        const slug = slugify(title, { lower: true, strict: true }).slice(0, 35);
-
+     
 
         const tagsArray = tags ? tags.split(",").map((t) => t.trim()) : [];
         const keywordsArray = keywords ? keywords.split(",").map((k) => k.trim()) : [];
@@ -56,13 +57,13 @@ export const newsCreat = async (formData) => {
             desc,
             type,
             taluko,
-            slug,
+            slug: url,
             author,
             tags: tagsArray,
             keywords: keywordsArray,
             isBreaking,
             location,
-            img:imgUrl,
+            img: imgUrl,
         });
 
 
