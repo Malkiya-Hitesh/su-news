@@ -61,7 +61,7 @@ function NewsBox({ newsData }) {
   }
 
   return (
-    <section className="grid min-[1024px]:grid-cols-[1fr_0.5fr] grid-cols-1 py-5 min-[1024px]:px-7 px-4.5 max-[640px]:px-2.3 gap-6 items-start">
+    <section className="grid min-[1024px]:grid-cols-[1fr_0.5fr] grid-cols-1 py-5 min-[1024px]:px-7 px-4.5 max-[640px]:px-2 gap-6 items-start">
       {/* LEFT MAIN DIV */}
       <div
         ref={leftRef}
