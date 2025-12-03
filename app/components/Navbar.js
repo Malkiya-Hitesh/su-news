@@ -4,7 +4,7 @@ import NavButoon from './ui/NavButoon'
 import ResposiveNave from './ResposiveNave';
 function Navbar() {
     return (
-        <nav className='grid grid-cols-[1fr_1fr]   w-[100vw] min-[1024px]:h-[8rem] h-[7.5rem] max-[640px]:h-[5.5rem] overflow-x-hidden  pr-[2rem] max-[640px]:pr-[1.5rem] items-center bg-[var(--color-border)] fixed top-0 ' >
+        <nav className='grid grid-cols-[1fr_1fr]   w-[100vw] min-[1024px]:h-[8rem] h-[7.5rem] max-[640px]:h-[5.5rem] overflow-x-hidden  pr-[2rem] max-[640px]:pr-[1.5rem] items-center bg-[var(--color-border)] fixed top-0 mb-2' >
             <div className=' '>
                 <Image
                     className=' min-[1024px]:w-[40%] w-[60%] max-[640px]:w-[70%] max-[450px]:w-[85%]    min-[1024px]:h-[8rem] h-[7.5rem] max-[640px]:h-[5.5rem]  object-cover  cursor-pointer '
