@@ -13,7 +13,7 @@ export async function GET(req) {
     const taluko = searchParams.get("taluko");
 
     const latest = searchParams.get("latest");
-
+const limit = searchParams.get("limit") || 50 
 
 
     let qury = {};
@@ -46,9 +46,11 @@ export async function GET(req) {
     }
 
 
-    const news = await News.find(qury);
 
-    return NextResponse.json(news, { status: 200 });
+    const news = await News.find(qury).sort({ createdAt: -1 }).limit(parseInt(limit));    
+
+
+        return NextResponse.json(news, { status: 200 });
   } catch (err) {
 
 

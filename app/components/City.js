@@ -17,7 +17,7 @@ function City() {
 ]
 
     return (
-        <div className='perent border   py-3 px-7 flex flex-row justify-start overflow-x-auto scrollbar-none scroll-smooth items-start gap-6 ' >
+        <div className='perent border   py-3 px-7 flex flex-row justify-start overflow-x-auto scrollbar-none scroll-smooth items-start gap-6 min-[1024px]:mt-[8rem] mt-[7.4rem] max-[640px]:mt-[5.5rem]' >
             {city.map((item , index)=>(
                 <CitySpan key={index} data={item} />
             ))}

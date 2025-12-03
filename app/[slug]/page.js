@@ -20,7 +20,7 @@ let url = `slug=${slug}`;
     return <Nonews />;
   }
   return (
-            <section className="min-[1024px]:mt-[8.1rem] mt-[7.5rem] max-[640px]:mt-[5.6rem]   ">
+            <section className="">
         <NewsBox newsData={newsData[0]} />
             </section>
   )

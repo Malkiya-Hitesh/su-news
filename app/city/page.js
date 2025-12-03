@@ -17,7 +17,7 @@ function page() {
         "wadhwan"
     ]
     return (
-        <section className="min-[1024px]:mt-[8.1rem] mt-[7.5rem] max-[640px]:mt-[5.6rem]   ">
+        <section className="   ">
             {city.map((item, index) => {
                 return (
                     <div key={index}>

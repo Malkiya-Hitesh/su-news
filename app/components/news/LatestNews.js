@@ -9,7 +9,7 @@ function LatestNews({ item }) {
     <>
       <section className="py-10 flex flex-col justify-end items-center gap-7">
         <H1 data={'latest '} />
-        <NewsSection item={item} url={'latest=true'} />
+        <NewsSection item={item} url={'limit=8'} />
         <div>
           <Link href={`/latest`}>
             <Button theme="dark">Load More</Button>
