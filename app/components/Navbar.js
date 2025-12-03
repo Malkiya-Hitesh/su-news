@@ -8,7 +8,7 @@ function Navbar() {
             <div className=' '>
                 <Image
                     className=' min-[1024px]:w-[40%] w-[60%] max-[640px]:w-[70%] max-[450px]:w-[85%]    min-[1024px]:h-[8rem] h-[7.5rem] max-[640px]:h-[5.5rem]  object-cover  cursor-pointer '
-                    src='/image/logo.png'
+                    src='/image/logo.jpg'
                     width={100000000000}
                     height={100000000000}
                     alt='logo'
