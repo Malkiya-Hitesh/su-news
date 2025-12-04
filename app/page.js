@@ -2,7 +2,7 @@ import City from "./components/City";
 import LatestNews from "./components/news/LatestNews";
 import NewsBreking from "./components/news/NewsBreking";
 import NewsCategery from "./components/news/NewsCategery";
-import Offers from "./components/Offers";
+// import Offers from "./components/Offers";
 
 export const metadata = {
   title: "Surendranagar News – Latest Local News, Updates & Breaking Stories",
@@ -41,19 +41,28 @@ export const metadata = {
 };
 
 export default function Home() {
-
+  let category = ["politics",
+    "sports",
+    "technology",
+    'health',
+    "education",
+    "crime",
+    "world",
+    "weather",
+    "local",
+    "other",]
   return (
     <main className=" ">
       {/* <City /> */}
       <LatestNews item={8} />
       <NewsBreking item={8} />
-      <Offers />
-      <NewsCategery type={'chotila'} item={8} cType={'taluko'} link={'city'} />
-      <Offers />
-      <NewsCategery type="sports" item={8} cType={'type'} link={'category'} />
-      <Offers />
-      <NewsCategery type="politics" item={8} cType={'type'} link={'category'} />
-      <Offers />
+{
+  category.map((item, index) => (
+    < NewsCategery key={index} type={item} item={8} cType={'type'} link={'category'} />
+  ))
+}
+      
+
 
 
     </main>

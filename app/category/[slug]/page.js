@@ -10,7 +10,7 @@ import H1 from '@/app/components/H1';
    
    <H1 data={slug} />
    <NewsSection  item={100} url={`category=${slug}`}   />
-   <Offers />
+   {/* <Offers /> */}
    </section>
   )
 }

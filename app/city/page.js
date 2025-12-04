@@ -29,7 +29,7 @@ function page() {
                         />
 
                         {/* Show Offers after every 2 city items */}
-                        {(index + 1) % 2 === 0 && <Offers />}
+                        {/* {(index + 1) % 2 === 0 && <Offers />} */}
                     </div>
                 )
             })}
