@@ -62,7 +62,7 @@ console.log(res);
                 "politics",
                 "sports",
                 "technology",
-                "business",
+                'health',
                 "education",
                 "crime",
                 "world",

@@ -4,6 +4,33 @@ import NavButoon from './ui/NavButoon'
 import ResposiveNave from './ResposiveNave';
 import NavDropdown from './ui/NavDropdown';
 function Navbar() {
+
+    let category = [
+                "politics",
+                "sports",
+                "technology",
+                'health',
+                "education",
+                "crime",
+                "world",
+                "weather",
+                "local",
+                "other",
+            ]
+            let city =  [
+                "chotila",
+                "chuda",
+                "dasada",
+                "dhrangadhra",
+                "halvad",
+                "lakhtar",
+                "limbdi",
+                "muli",
+                "sayla",
+                "thangadh",
+                "wadhwan"
+            ]
+
     return (
         <nav className='grid grid-cols-[1fr_1fr] w-[100vw] overflow-visible min-[1024px]:h-[8rem] h-[7.5rem] max-[640px]:h-[5.5rem] pr-[2rem] max-[640px]:pr-[1.5rem] items-center bg-[var(--color-border)] fixed top-0 mb-2'>
 
@@ -25,23 +52,9 @@ function Navbar() {
                     <NavDropdown 
                     mobile={ false}
                         title="category"
-                        items={ 
-                           [
-                { label :"politics" , href:"/category/politics"},
-                { label :"sports" , href:"/category/sports"},
-                { label :"business" , href:"/category/business"},
-                { label :"technology" , href:"/category/tech"},
-                { label :"entertainment" , href:"/category/entertainment"},
-                { label :"health" , href:"/category/health"},
-                { label :"science" , href:"/category/science"},
-                { label :"education" , href:"/category/education"},
-                { label :"crime" , href:"/category/crime"},
-                { label :"world" , href:"/category/world"},
-                { label :"weather" , href:"/category/weather"},
-                { label :"local" , href:"/category/local"},
-                { label :"other" , href:"/category/other"},
-              
-            ]
+                        
+                        items={
+                            category.map(item => ({ label: item, href: `/category/${item}` }))
                         }
                     />
                 </div>
@@ -51,23 +64,8 @@ function Navbar() {
                     mobile={false}
                         title="city"
                         items={
-                            
-                            [
-               { label :"chotila" , href:"/city/chotila"},
-                { label :"thangadh" , href:"/city/thangadh"},
-                { label :"sayla" , href:"/city/sayla"}, 
-                { label :"chuda" , href:"/city/chuda"},
-                { label :"dasada" , href:"/city/dasada"},
-                { label :"dhrangadhra" , href:"/city/dhrangadhra"},
-                { label :"halvad" , href:"/city/halvad"},
-                { label :"lakhtar" , href:"/city/lakhtar"},
-                { label :"limbdi" , href:"/city/limbdi"},
-                { label :"muli" , href:"/city/muli"},
-                { label :"sayla" , href:"/city/sayla"},
-                { label :"thangadh" , href:"/city/thangadh"},
-                { label :"wadhwan" , href:"/city/wadhwan"},
-            ]
-                           }
+                            city.map(item => ({ label: item, href: `/city/${item}` }))
+                        }
                     />
 
                 </div>

@@ -67,7 +67,7 @@ function ResposiveNave() {
                     { label: "other", href: "/category/other" },
                 ]} />
 
-                <NavDropdown title="city" onClick={toggleMenu} mobile={true} items={[
+                <NavDropdown title="city" onClick={toggleMenu} mobile={true}  items={[
 
                     { label: "chotila", href: "/city/chotila" },
                     { label: "thangadh", href: "/city/thangadh" },

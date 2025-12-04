@@ -3,17 +3,17 @@ import NewsCategery from '../components/news/NewsCategery'
 
 function page() {
     let category = [
-
-        "politics",
-        "sports",
-        "technology",
-        "business",
-        "education",
-        "crime",
-        "world",
-        "weather",
-        "local",
-    ]
+                "politics",
+                "sports",
+                "technology",
+                'health',
+                "education",
+                "crime",
+                "world",
+                "weather",
+                "local",
+                "other",
+            ]
 
 
     return (

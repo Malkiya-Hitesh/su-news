@@ -24,20 +24,36 @@ export const validateNews = (data) => {
 
   // News Type (Enum)
   const validTypes = [
-    "politics", "sports", "technology", "business", "education",
-    "crime", "world", "weather", "local", "other"
-  ];
+                "politics",
+                "sports",
+                "technology",
+                'health',
+                "education",
+                "crime",
+                "world",
+                "weather",
+                "local",
+                "other",
+            ];
   const type = getVal("type");
   if (!type) errors.type = "News type is required.";
   else if (!validTypes.includes(type))
     errors.type = "Invalid news type selected.";
 
   // Taluko (Enum)
-  const validTaluko = [
-    "chotila", "chuda", "dasada", "dhrangadhra",
-    "halvad", "lakhtar", "limbdi", "muli",
-    "sayla", "thangadh", "wadhwan"
-  ];
+  const validTaluko =  [
+                "chotila",
+                "chuda",
+                "dasada",
+                "dhrangadhra",
+                "halvad",
+                "lakhtar",
+                "limbdi",
+                "muli",
+                "sayla",
+                "thangadh",
+                "wadhwan"
+            ]
   const taluko = getVal("taluko");
   if (!taluko) errors.taluko = "Taluko is required.";
   else if (!validTaluko.includes(taluko))

@@ -17,7 +17,15 @@ export default function NavDropdown({ title, items , mobile , onClick}) {
       </button>
 
       {open && (
-        <div className={`absolute top-full ${mobile ? "left-25" : ' no-scrollbar left-0'} overflow-y-scroll  h-[80vh] bg-white shadow-xl rounded-lg p-3 z-50 min-w-[10rem]`}>
+        <div className={`absolute top-full ${mobile ? "left-25" : ' no-scrollbar left-0'} overflow-y-scroll  max-h-[80vh] bg-white shadow-xl rounded-lg p-3 z-50 min-w-[10rem]`}>
+           <Link
+              onClick={onClick}
+             
+              href={title}
+              className="block px-2 py-2 text-gray-700 hover:bg-gray-100 rounded-md z-50"
+            >
+                All
+            </Link>
           {items.map((item, index) => (
             <Link
               onClick={onClick}

@@ -3,19 +3,19 @@ import NewsCategery from '../components/news/NewsCategery'
 import Offers from '../components/Offers'
 
 function page() {
-    let city = [
-        "chotila",
-        "chuda",
-        "dasada",
-        "dhrangadhra",
-        "halvad",
-        "lakhtar",
-        "limbdi",
-        "muli",
-        "sayla",
-        "thangadh",
-        "wadhwan"
-    ]
+    let city =  [
+                "chotila",
+                "chuda",
+                "dasada",
+                "dhrangadhra",
+                "halvad",
+                "lakhtar",
+                "limbdi",
+                "muli",
+                "sayla",
+                "thangadh",
+                "wadhwan"
+            ]
     return (
         <section className="   ">
             {city.map((item, index) => {

@@ -31,7 +31,7 @@ const NewsSchema = new mongoose.Schema(
                 "politics",
                 "sports",
                 "technology",
-                "business",
+                'health',
                 "education",
                 "crime",
                 "world",
