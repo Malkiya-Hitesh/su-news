@@ -46,24 +46,46 @@ function ResposiveNave() {
                     onClick={toggleMenu}
                     className='text-[2.35rem] cursor-pointer absolute top-3 right-5'
                 />
-                <NavDropdown title="category" onClick={toggleMenu} mobile={true} items={[
-                    { label: "Politics", href: "/category/politics" },
-                    { label: "Sports", href: "/category/sports" },
-                    { label: "Business", href: "/category/business" },
-                    { label: "Technology", href: "/category/tech" },
-                ]} />
+
+
                 <div onClick={toggleMenu}>
                     <NavLink h={"/"} data={"home"} />
                 </div>
-                <div onClick={toggleMenu}>
-                    <NavLink h={"/sport"} data={"sport"} />
-                </div>
-                <div onClick={toggleMenu}>
-                    <NavLink h={"/events"} data={"events"} />
-                </div>
-                <div onClick={toggleMenu}>
-                    <NavLink h={"/offers"} data={"offers"} />
-                </div>
+                <NavDropdown title="category" onClick={toggleMenu} mobile={true} items={[
+                    { label: "politics", href: "/category/politics" },
+                    { label: "sports", href: "/category/sports" },
+                    { label: "business", href: "/category/business" },
+                    { label: "technology", href: "/category/tech" },
+                    { label: "entertainment", href: "/category/entertainment" },
+                    { label: "health", href: "/category/health" },
+                    { label: "science", href: "/category/science" },
+                    { label: "education", href: "/category/education" },
+                    { label: "crime", href: "/category/crime" },
+                    { label: "world", href: "/category/world" },
+                    { label: "weather", href: "/category/weather" },
+                    { label: "local", href: "/category/local" },
+                    { label: "other", href: "/category/other" },
+                ]} />
+
+                <NavDropdown title="category" onClick={toggleMenu} mobile={true} items={[
+
+                    { label: "chotila", href: "/city/chotila" },
+                    { label: "thangadh", href: "/city/thangadh" },
+                    { label: "sayla", href: "/city/sayla" },
+                    { label: "chuda", href: "/city/chuda" },
+                    { label: "dasada", href: "/city/dasada" },
+                    { label: "dhrangadhra", href: "/city/dhrangadhra" },
+                    { label: "halvad", href: "/city/halvad" },
+                    { label: "lakhtar", href: "/city/lakhtar" },
+                    { label: "limbdi", href: "/city/limbdi" },
+                    { label: "muli", href: "/city/muli" },
+                    { label: "sayla", href: "/city/sayla" },
+                    { label: "thangadh", href: "/city/thangadh" },
+                    { label: "wadhwan", href: "/city/wadhwan" },
+
+                ]} />
+
+
 
                 <div onClick={toggleMenu}>
                     <NavLink h={"/contact"} data={"contact"} />
@@ -84,33 +106,4 @@ export default ResposiveNave;
 
 
 
-function MobileDropdown({ title, items }) {
-    const [open, setOpen] = useState(false);
 
-    return (
-        <div className='w-full px-6'>
-            <button
-                onClick={() => setOpen(!open)}
-                className='w-full text-left py-2 text-[1.1rem] font-medium flex justify-between items-center'
-            >
-                {title}
-                <span>{open ? "▲" : "▼"}</span>
-            </button>
-
-            <div
-                className={`
-                    flex flex-col gap-2 pl-4 pr-2 transition-all
-                    ${open ? "max-h-[300px] opacity-100 py-2" : "max-h-0 opacity-0 overflow-hidden"}
-                `}
-            >
-                {items.map((item, index) => (
-                    <NavLink
-                        key={index}
-                        h={item.href}
-                        data={item.label}
-                    />
-                ))}
-            </div>
-        </div>
-    );
-}
