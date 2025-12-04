@@ -7,7 +7,7 @@ export default function NavDropdown({ title, items , mobile , onClick}) {
 
   return (
     <div
-      className="relative z-50 "
+      className="relative  "
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
     
@@ -17,13 +17,13 @@ export default function NavDropdown({ title, items , mobile , onClick}) {
       </button>
 
       {open && (
-        <div className={`absolute top-full ${mobile ? "left-15" : ' left-0'}  bg-white shadow-xl rounded-lg p-3 z-50 min-w-[10rem]`}>
+        <div className={`absolute top-full ${mobile ? "left-25" : ' no-scrollbar left-0'} overflow-y-scroll  h-[80vh] bg-white shadow-xl rounded-lg p-3 z-50 min-w-[10rem]`}>
           {items.map((item, index) => (
             <Link
               onClick={onClick}
               key={index}
               href={item.href}
-              className="block px-2 py-2 text-gray-700 hover:bg-gray-100 rounded-md"
+              className="block px-2 py-2 text-gray-700 hover:bg-gray-100 rounded-md z-50"
             >
               {item.label}
             </Link>
