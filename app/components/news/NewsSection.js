@@ -44,8 +44,8 @@ async function NewsSection({ item, url }) {
 
         <Image
           src={newsData[0].img || '/noimage.jpg'}
-          width={1000}
-          height={1000}
+          width={10000}
+          height={10000}
           className="w-full min-[1024px]:h-[20rem] h-[22rem] object-contain rounded-[10px] row-span-2"
           alt="main-news"
         />

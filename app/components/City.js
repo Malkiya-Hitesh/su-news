@@ -36,7 +36,7 @@ function CitySpan({ data }) {
     return (
         <Link href={`/city/${data.toLowerCase()}`}>
         <span
-            className='text-[length:var(--text-lgg)] text-[var(--color-text)] border-blue-600 font-[200] tracking-[.12rem]   hover:bg-gradient-to-r from-blue-600 to-purple-600 hover:text-transparent bg-clip-text  pb-1   cursor-pointer '
+            className='text-[length:var(--text-lgg)] text-[var(--color-text)] border-blue-600 font-[400] tracking-[.12rem]   hover:bg-gradient-to-r from-blue-600 to-purple-600 hover:text-transparent bg-clip-text  pb-1   cursor-pointer '
             style={{ fontFamily: 'Inter, Roboto, "Helvetica Neue", Arial, sans-serif' }}
         >
             {data}
