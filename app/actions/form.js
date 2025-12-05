@@ -1,7 +1,6 @@
 'use server'
 
 import connectDB from "../lib/mongoos";
-import slugify from "slugify";
 import News from "../modules/news";
 import { v2 as cloudinary } from "cloudinary";
 cloudinary.config({

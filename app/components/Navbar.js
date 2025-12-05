@@ -71,8 +71,8 @@ function Navbar() {
                 </div>
 
                 <NavLink h={"/contact"} data={"contact"} />
-                <NavButoon theme={"dark"}>subscribe</NavButoon>
-                <NavButoon theme={"light"}>login</NavButoon>
+                {/* <NavButoon theme={"dark"}>subscribe</NavButoon>
+                <NavButoon theme={"light"}>login</NavButoon> */}
 
             </div>
             <div className=' max-[1024px]:flex hidden justify-end  items-center gap-5 ' >

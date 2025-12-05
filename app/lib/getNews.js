@@ -4,7 +4,9 @@ export const getNews = async (url) => {
      
         
         const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/news?${urll}`, {
-            cache: "no-store", // or "force-cache"
+             next: { revalidate: 3600 }
+
+
         });
 
         const data = await res.json();
